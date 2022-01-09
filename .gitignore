@@ -1,32 +1,165 @@
-# Prerequisites
-*.d
+int a1=2;
+int Y1=3;
+int b1=4;
+int a2=7;
+int Y2=5;
+int b2=6;
+int a3=8;
+int Y3=10;
+int b3=9;
+int a4=12;
+int b4=13;
+int Y4=11;
+  
+int Y1_output;
+int Y2_output;
+int Y3_output;
+int Y4_output;
+void setup()
+{
+  pinMode(Y1, INPUT);
+  pinMode(a1, OUTPUT);
+  pinMode(b1, OUTPUT);
+  pinMode(Y2, INPUT);
+  pinMode(a2, OUTPUT);
+  pinMode(b2, OUTPUT);
+  pinMode(Y3, INPUT);
+  pinMode(a3, OUTPUT);
+  pinMode(b3, OUTPUT);
+  pinMode(Y4, INPUT);
+  pinMode(a4, OUTPUT);
+  pinMode(b4, OUTPUT);
+  Serial.begin(9600);
+  
+}
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+void loop(){
+  //For Y1 gate
+  Serial.print("A\tB\tY1\n");
+  digitalWrite(a1,LOW);
+  digitalWrite(b1,LOW);
+  Serial.print("LOW\tLOW\t");
+  Y1_output=digitalRead(Y1);
+  Serial.print(Y1_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a1,LOW);
+  digitalWrite(b1,HIGH);
+  Serial.print("LOW\tHIGH\t");
+  Y1_output=digitalRead(Y1);
+  Serial.print(Y1_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a1,HIGH);
+  digitalWrite(b1,LOW);
+  Serial.print("HIGH\tLOW\t");
+  Y1_output=digitalRead(Y1);
+  Serial.print(Y1_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a1,HIGH);
+  digitalWrite(b1,HIGH);
+  Serial.print("HIGH\tHIGH\t");
+  Y1_output=digitalRead(Y1);
+  Serial.print(Y1_output);
+  Serial.print("\n");
+  delay(2000);
+ 
+ 
+  //For Y2 gate
+  Serial.print("A\tB\tY2\n");
+  digitalWrite(a2,LOW);
+  digitalWrite(b2,LOW);
+  Serial.print("LOW\tLOW\t");
+  Y2_output=digitalRead(Y2);
+  Serial.print(Y2_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a2,LOW);
+  digitalWrite(b2,HIGH);
+  Serial.print("LOW\tHIGH\t");
+  Y2_output=digitalRead(Y2);
+  Serial.print(Y2_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a2,HIGH);
+  digitalWrite(b2,LOW);
+  Serial.print("HIGH\tLOW\t");
+  Y2_output=digitalRead(Y2);
+  Serial.print(Y2_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a2,HIGH);
+  digitalWrite(b2,HIGH);
+  Serial.print("HIGH\tHIGH\t");
+  Y2_output=digitalRead(Y2);
+  Serial.print(Y1_output);
+  Serial.print("\n");
+  delay(2000);
+  
+  
+  
+  //For Y3 gate
+  Serial.print("A\tB\tY3\n");
+  digitalWrite(a3,LOW);
+  digitalWrite(b3,LOW);
+  Serial.print("LOW\tLOW\t");
+  Y3_output=digitalRead(Y3);
+  Serial.print(Y3_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a3,LOW);
+  digitalWrite(b3,HIGH);
+  Serial.print("LOW\tHIGH\t");
+  Y3_output=digitalRead(Y3);
+  Serial.print(Y3_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a3,HIGH);
+  digitalWrite(b3,LOW);
+  Serial.print("HIGH\tLOW\t");
+  Y2_output=digitalRead(Y3);
+  Serial.print(Y3_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a3,HIGH);
+  digitalWrite(b3,HIGH);
+  Serial.print("HIGH\tHIGH\t");
+  Y2_output=digitalRead(Y3);
+  Serial.print(Y3_output);
+  Serial.print("\n");
+  delay(2000);
+  
+  
+  
+  //For Y4 gate
+  Serial.print("A\tB\tY4\n");
+  digitalWrite(a4,LOW);
+  digitalWrite(b4,LOW);
+  Serial.print("LOW\tLOW\t");
+  Y4_output=digitalRead(Y4);
+  Serial.print(Y4_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a4,LOW);
+  digitalWrite(b4,HIGH);
+  Serial.print("LOW\tHIGH\t");
+  Y4_output=digitalRead(Y4);
+  Serial.print(Y4_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a4,HIGH);
+  digitalWrite(b4,LOW);
+  Serial.print("HIGH\tLOW\t");
+  Y4_output=digitalRead(Y4);
+  Serial.print(Y4_output);
+  Serial.print("\n");
+  delay(2000);
+  digitalWrite(a4,HIGH);
+  digitalWrite(b4,HIGH);
+  Serial.print("HIGH\tHIGH\t");
+  Y4_output=digitalRead(Y4);
+  Serial.print(Y4_output);
+  Serial.print("\n");
+  delay(2000);
+}
